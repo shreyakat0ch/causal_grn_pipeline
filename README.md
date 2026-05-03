@@ -1,14 +1,14 @@
 # Causal GRN Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-GPU-red)
+![PyTorch](https://img.shields.io/badge/PyTorch-High_Performance-red)
 ![License](https://img.shields.io/badge/License-Proprietary-critical)
 ![Profile Views](https://komarev.com/ghpvc/?username=shreyakat0ch&label=Profile+Views&color=blue&style=flat)
 ![Repo Views](https://visitor-badge.laobi.icu/badge?page_id=shreyakat0ch.causal_grn_pipeline)
 
 A genome-wide causal discovery pipeline for building gene regulatory networks (GRNs) from RNA-seq TPM data. The pipeline outputs a directed acyclic graph (DAG) of regulatory interactions, annotated with transcription factors and edge signs (activation vs repression).
 
-Designed to scale to ~14,000 genes on a single GPU.
+Designed to scale to ~14,000 genes on standard research hardware.
 
 ---
 
@@ -68,13 +68,13 @@ causal_grn10/
 
 ### Requirements
 
-Python 3.8+, a CUDA GPU is strongly recommended for Stage 4.
+Python 3.8+, high-performance hardware is recommended for Stage 4.
 
 ```bash
 pip install numpy pandas networkx scikit-learn joblib tqdm torch torchvision torch-geometric scipy
 ```
 
-Install PyTorch with the right CUDA version from [pytorch.org](https://pytorch.org/get-started/locally/) before installing `torch-geometric`.
+Install PyTorch with the appropriate support for your system from [pytorch.org](https://pytorch.org/get-started/locally/) before installing `torch-geometric`.
 
 ### Running the pipeline
 
@@ -162,6 +162,16 @@ DISCRETE_THRESHOLD = 0.01
 - [SIGNOR](https://signor.uniroma2.it/) — validation ground truth
 
 ---
+
+## References
+
+If you use this pipeline, please cite the following foundational works:
+
+- **Knockoffs**: Candès, E. J., Fan, J., Janson, L., & Lv, J. (2018). Panning for Gold: Model-X Knockoffs for High-Dimensional Controlled Variable Selection. *Journal of the Royal Statistical Society: Series B (Statistical Methodology)*.
+- **GraphSAGE**: Hamilton, W., Ying, Z., & Leskovec, J. (2017). Inductive Representation Learning on Large Graphs. *Advances in Neural Information Processing Systems (NeurIPS)*.
+- **DG Score**: Andrews, B., Ramsey, J., & Cooper, G. F. (2019). Learning High-dimensional Directed Acyclic Graphs with Mixed Data-Types. *Proceedings of the 35th Conference on Uncertainty in Artificial Intelligence (UAI)*.
+- **STRING Database**: Szklarczyk, D. et al. (2021). The STRING database in 2021: customizable protein-protein networks, and functional characterization of user-uploaded gene/measurement sets. *Nucleic Acids Research*.
+- **JASPAR**: Castro-Mondragon, J. A. et al. (2022). JASPAR 2022: the 9th release of the open-access database of transcription factor binding profiles. *Nucleic Acids Research*.
 
 ## License
 
