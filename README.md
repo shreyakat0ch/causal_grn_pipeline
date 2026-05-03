@@ -71,7 +71,7 @@ causal_grn10/
 Python 3.8+, high-performance hardware is recommended for Stage 4.
 
 ```bash
-pip install numpy pandas networkx scikit-learn joblib tqdm torch torchvision torch-geometric scipy
+pip install -r requirements.txt
 ```
 
 Install PyTorch with the appropriate support for your system from [pytorch.org](https://pytorch.org/get-started/locally/) before installing `torch-geometric`.
@@ -99,6 +99,17 @@ python validate_network.py
 ```
 
 Compares predicted edges against TRRUST and SIGNOR and reports precision, AUROC, AUPRC, direction accuracy, and sign accuracy.
+
+## Quick Demo
+
+To test the pipeline without large datasets, you can generate a small synthetic dataset:
+
+1. **Generate demo data**:
+   ```bash
+   python scripts/generate_demo_data.py
+   ```
+2. **Run pipeline on demo data**:
+   Modify the `DATA_DIR` and `PPI_FILE` in `causal_pipeline_v1.py` to point to `example_data/` and `example_data/string_ppi_tiny.txt`.
 
 ---
 
