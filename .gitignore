@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Large data files (too big for GitHub)
+data/knockoff_matrix_14k.tsv
+data/normalized_expression.npy
+data/rf_skeleton_14k.json
+data/kegg_pairs.txt
+data/reactome_pairs.txt
+
+# Large prior files
+priors/STRING_PPI_filtered.txt
+
+# Large validation files
+validation/signor_human.tsv
+
+# Generated results (re-produced by running the pipeline)
+results/
+outputs/
+
+# Archive folder
+_archive_notears/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
