@@ -1,4 +1,5 @@
-# Causal GRN Pipeline
+#  DoppelGraph
+
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-High_Performance-red)
